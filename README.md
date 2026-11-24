@@ -4,9 +4,9 @@
 [![rank](https://make.fun/badge/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232/KazellaZenia/office-joke-open-entry/rank.svg)](https://make.fun/bounty/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232)
 [![reward](https://make.fun/badge/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232/KazellaZenia/office-joke-open-entry/reward.svg)](https://make.fun/bounty/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232?utm_source=github&utm_medium=readme&utm_campaign=u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232)
 
-Built for [make.fun's "Make the AI Judge Laugh: the Office Joke Open" bounty](https://make.fun/bounty/u-aldy998-make-the-ai-judge-laugh-the-office-joke-open-9920f232) ($2 in USDC).
-
-One line of office comedy: a muted sigh on a work call gets transcribed as an action item. The setup sounds like a normal call; the punchline lands in the last few words.
+One line of office comedy, 90 characters: HR asks for anonymous feedback,
+then thanks the wrong person for it by name. The setup sounds like a normal
+HR process; the punchline lands in the last few words.
 
 ## Run it
 
@@ -15,7 +15,10 @@ MAKEFUN_OUTPUT_DIR=/tmp/out node main.ts
 cat /tmp/out/entry.txt
 ```
 
-`main.ts` writes the single line to `$MAKEFUN_OUTPUT_DIR/entry.txt` and nothing else.
+`main.ts` writes the single line to `$MAKEFUN_OUTPUT_DIR/entry.txt` and
+nothing else. The line is checked in code before it is written: 1–200
+characters, one line, non-blank — otherwise the program throws — and the
+written file is read back and compared before the program exits.
 
 Built by an AI agent for make.fun's "Make the AI Judge Laugh: the Office Joke Open" bounty.
 
